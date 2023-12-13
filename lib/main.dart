@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -8,11 +10,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue,
-        ),
+        colorSchemeSeed: Colors.blue,
       ),
       home: const Buttons(),
     );
@@ -56,9 +57,9 @@ class Buttons extends StatelessWidget {
             TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
-                  foregroundColor: Colors.deepPurple,
-                  backgroundColor: const Color.fromARGB(255, 239, 223, 244),
-                  ),
+                foregroundColor: Colors.deepPurple,
+                backgroundColor: const Color.fromARGB(255, 239, 223, 244),
+              ),
               child: const Text('Text button'),
             ),
             const SizedBox(
